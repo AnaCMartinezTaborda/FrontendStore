@@ -3,10 +3,9 @@
     --primario: #9C27B0;
     --primarioOscuro: #89119D;
     --secundario: #FFCE00;
-    -secundarioOscuro: rgb(233, 287, 2);
+    --secundarioOscuro: #e4b703;
     --blanco: #FFF;
     --negro: #000;
-
     --fuentePrincipal: "Staatliches", serif;
 }
 /* General */
@@ -16,7 +15,6 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model*/
-    /* scroll-snap-type: y mandatory; Scroll Snap */
 }
 body{
     background-color: var(--primario);
@@ -40,7 +38,7 @@ a{
     text-decoration: none;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 .container{
     max-width: 120rem;
@@ -85,9 +83,6 @@ img{
 .producto{
     background-color: var(--primarioOscuro);
     padding: 1rem;
-}
-.producto__imagen{
-    width: 100%;
 }
 .producto__nombre{
     font-size: 4rem;
@@ -150,7 +145,6 @@ img{
 }
 .nosotros__imagen{
     grid-row: 1 / 2;
-    width: 100%;
 }
 
 /* Bloques */
@@ -165,9 +159,7 @@ img{
 .bloque__titulo{
     margin: 0;
 }
-.bloque__imagen{
-    width: 100%;
-}
+
 /* Media Queries */
 @media (min-width: 768px) {
     .nosotros{
@@ -183,5 +175,43 @@ img{
 @media (min-width: 768px) {
     .bloques{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/** Página del Producto **/
+/* Formulario */
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.formulario__campo{
+    border: 1rem solid var(--primarioOscuro); /* Ancho, tipo y color del borde  */ /* border-width: 1rem;border-style: solid;border-color: var(--primarioOscuro); */
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    appearance: none;
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+.formulario__submit:hover{
+    background-color: var(--secundarioOscuro);
+    cursor: pointer;
+}
+
+/* Media Querie */
+@media (min-width: 768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
     }
 }
