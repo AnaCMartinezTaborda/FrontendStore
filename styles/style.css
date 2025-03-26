@@ -17,7 +17,7 @@ html{
     box-sizing: border-box; /* Hack para Box Model*/
 }
 body{
-    background-color: var(--primario);
+    background-color: var(--blanco);
     font-size: 1.6rem; /* 1rem = 10px*/
     line-height: 1.5;
 }
@@ -83,6 +83,7 @@ img{
 .producto{
     background-color: var(--primarioOscuro);
     padding: 1rem;
+    border-radius: 1rem;
 }
 .producto__nombre{
     font-size: 4rem;
@@ -108,10 +109,12 @@ img{
 .grafico--camisas{
     grid-row: 2 /3;
     background-image: url(../img/grafico1.jpg);
+    border-radius: 1rem;
 }
 .grafico--node{
     background-image: url(../img/grafico2.jpg);
     grid-row: 8 / 9;
+    border-radius: 1rem;
 }
 /* Footer */
 .footer{
